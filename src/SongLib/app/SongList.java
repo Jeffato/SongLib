@@ -2,10 +2,8 @@ package SongLib.app;
 
 //TODO: Use priority queue for songlist?
 public class SongList{
+    PriorityQueue<Songs> pq;
 
-
-
-    //TODO: Figure out persistence
 
     /*
         New songs must have at least a name and artist
@@ -20,6 +18,7 @@ public class SongList{
         Name and artist field may not be empty
      */
     public void remove(){ //TODO: Finish Method
+
     }
 
     /*

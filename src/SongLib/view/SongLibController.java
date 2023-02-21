@@ -14,8 +14,7 @@ public class SongLibController {
     private ObservableList<Songs> obsList;
 
     public void start(){
-        //Create obs list from ArrayList TODO: Change to JSON/PrioQ
-
+        //Create obs list from ArrayList TODO: Change to load from JSON
         obsList = FXCollections.observableArrayList(
                new Songs("September"),
                new Songs("Notion")
@@ -23,5 +22,4 @@ public class SongLibController {
 
         listView.setItems(obsList);
     }
-
 }
