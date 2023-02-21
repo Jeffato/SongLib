@@ -4,7 +4,6 @@ package SongLib.app;
 public class SongList{
     PriorityQueue<Songs> pq;
 
-
     /*
         New songs must have at least a name and artist
         User may not add a song that has the same name and artist (NO Duplicates)

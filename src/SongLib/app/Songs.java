@@ -49,13 +49,17 @@ public class Songs implements Comparable<Songs>{
     public int compareTo(Songs o) {
 
         String firstSongInfo = this.getName();
-        String secondSongInfo = this.getName();
+        String secondSongInfo = o.getName();
 
         if(firstSongInfo.equals(secondSongInfo)){
             firstSongInfo = this.getArtist();
-            secondSongInfo = this.getArtist();
+            secondSongInfo = o.getArtist();
         }
 
          return firstSongInfo.compareTo(secondSongInfo);
+    }
+
+    public String toString(){
+        return this.getName();
     }
 }
