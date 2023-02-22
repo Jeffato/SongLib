@@ -1,3 +1,9 @@
+/*
+ * Ashhad Siddiqui	(as3475)
+ * John Bailon (jlb671)
+ *
+ */
+
 package SongLib.app;
 
 import java.awt.*;

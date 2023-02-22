@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
+        * Ashhad Siddiqui	(as3475)
+        * John Bailon (jlb671)
+        *
+-->
+<!--
   Copyright (c) 2015, 2019, Gluon and/or its affiliates.
   All rights reserved. Use is subject to license terms.
 
@@ -38,12 +43,11 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SongLib.view.SongLibController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
       <children>
             <ListView fx:id="listView" layoutX="14.0" layoutY="145.0" prefHeight="200.0" prefWidth="253.0" />
-            <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Add" />
-            <Button layoutX="125.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Edit" />
-            <Button layoutX="200.0" layoutY="353.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" text="Remove" />
+            <Button fx:id="edit" layoutX="14.0" layoutY="354.0" mnemonicParsing="false" onAction="#buttonListener" prefHeight="25.0" prefWidth="67.0" text="Edit" />
+            <Button fx:id="remove" layoutX="200.0" layoutY="353.0" mnemonicParsing="false" onAction="#buttonListener" prefHeight="27.0" prefWidth="67.0" text="Remove" />
             <VBox layoutX="14.0" layoutY="14.0" prefHeight="126.0" prefWidth="253.0">
                 <children>
                     <Text text="Currently selected song:" wrappingWidth="153.5634765625" GridPane.columnIndex="0" GridPane.rowIndex="0" />
