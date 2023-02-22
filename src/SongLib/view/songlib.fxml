@@ -32,73 +32,46 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SongLib.view.SongLibController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SongLib.view.SongLibController">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="375.0" prefWidth="574.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
-            <ListView layoutX="14.0" layoutY="11.0" prefHeight="359.0" prefWidth="257.0" fx:id = "listView" />
-            <Text layoutX="282.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="235.13671875" />
-            <Text layoutX="282.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="335.13671875" />
-            <Text layoutX="282.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="298.0" />
-            <Button layoutX="278.0" layoutY="238.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Add" />
-            <Button layoutX="277.0" layoutY="277.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Edit" />
-            <Button layoutX="277.0" layoutY="314.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="67.0" text="Remove" />
+            <ListView fx:id="listView" layoutX="14.0" layoutY="145.0" prefHeight="200.0" prefWidth="253.0" />
+            <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Add" />
+            <Button layoutX="125.0" layoutY="354.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Edit" />
+            <Button layoutX="200.0" layoutY="353.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="67.0" text="Remove" />
+            <VBox layoutX="14.0" layoutY="14.0" prefHeight="126.0" prefWidth="253.0">
+                <children>
+                    <Text text="Currently selected song:" wrappingWidth="153.5634765625" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Text fx:id="nameDetailText" text="Name" wrappingWidth="124.5634765625" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Text fx:id="artistDetailText" text="Artist" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Text fx:id="albumDetailText" text="Album" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <Text fx:id="yearDetailText" text="Year" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                </children>
+            </VBox>
+            <VBox layoutX="308.0" layoutY="23.0" prefHeight="331.0" prefWidth="185.0" spacing="5.0">
+               <children>
+                       <Text text="Add a new song:" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+                       <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                       <TextField fx:id="nameTxtField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                       <Label text="Artist" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                       <TextField fx:id="artistTxtField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                       <Label text="Album (Optional)" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                       <TextField fx:id="albumTxtField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                       <Label text="Year (Optional)" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                       <TextField fx:id="yearTxtField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                       <Button fx:id="confirmAddBtn" onAction="#buttonListener" prefHeight="17.0" prefWidth="130.0" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                       <Button fx:id="cancelAddBtn" onAction="#buttonListener" prefHeight="17.0" prefWidth="130.0" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </VBox>
       </children>
     </AnchorPane>
   </children>
